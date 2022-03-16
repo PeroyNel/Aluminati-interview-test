@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <input type="number" v-model="limit" />
+    <input type="number" v-model="limit" min="1" max="100" />
     <Numbers/>
   </div>
 </template>
