@@ -12,8 +12,7 @@ export default {
   data()
   {
     return {
-      limit: this.$parent.limit,
-      numbers: []
+      none: null
     }
   },
   methods: {
