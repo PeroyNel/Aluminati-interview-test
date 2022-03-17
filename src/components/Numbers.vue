@@ -16,12 +16,6 @@ export default {
       numbers: []
     }
   },
-  watch: {
-    ['$parent.limit'](newLimit)
-    {
-      this.limit = newLimit;
-    }
-  },
   methods: {
     listOfRandomNumbers()
     {
