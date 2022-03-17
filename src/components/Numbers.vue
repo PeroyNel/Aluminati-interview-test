@@ -20,7 +20,7 @@ export default {
     listOfRandomNumbers()
     {
       let numbers = [];
-      for(var i = 1; i < this.limit; i++)
+      for(var i = 1; i < (this.$props.number); i++)
       {
         numbers = [...numbers, i];
       }
