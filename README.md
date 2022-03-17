@@ -10,6 +10,8 @@ If I am indeed in my root directory I can continue by running the “npm install
 
 When I had a look at the package.json file I could determine that I would be working with vue “^2.5.2” and as such I would refine my solutions around this version of vue.
 
+In order to run the project I used the "npm start dev" command to spin up a development server and view the project in a browser by following the url of "http://localhost:8080".
+
 # App.vue
 
 1: I have made changes to the input number limits, setting the min value to 1 and the max value to 100. This is to keep in accordance with the specifications.
