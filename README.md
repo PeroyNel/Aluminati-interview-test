@@ -12,10 +12,13 @@ When I had a look at the package.json file I could determine that I would be wor
 
 # App.vue
 
-I have made changes to the input number limits, setting the min value to 1 and the max value to 100. This is to keep in accordance with the specifications.
-I made sure to change the v-model to v-model.number, this ensures that the results that we get are returned as typeof(Number) === true.
-I implemented a computed method that listens for, updates and returns the limit change from 100 when it is modified in the input field by the user.
-I passed the ‘number’ property to the ‘Numbers’ component, this allows me to pass through the value that I was returned from the getLimit computed method. This allows me to remove the watch method from Numbers.vue as this way the computed method is passing reactive data from the parent to the child instead of waiting for changes to be made before updating by letting the watch method listen to the parent for updates. This is a less taxing solution on the Vue engine and gives opportunity for scaling in real world applications.
+1: I have made changes to the input number limits, setting the min value to 1 and the max value to 100. This is to keep in accordance with the specifications.
+
+2: I made sure to change the v-model to v-model.number, this ensures that the results that we get are returned as typeof(Number) === true.
+
+3: I implemented a computed method that listens for, updates and returns the limit change from 100 when it is modified in the input field by the user.
+
+4: I passed the ‘number’ property to the ‘Numbers’ component, this allows me to pass through the value that I was returned from the getLimit computed method. This allows me to remove the watch method from Numbers.vue as this way the computed method is passing reactive data from the parent to the child instead of waiting for changes to be made before updating by letting the watch method listen to the parent for updates. This is a less taxing solution on the Vue engine and gives opportunity for scaling in real world applications.
 
 # Numbers.vue
 
