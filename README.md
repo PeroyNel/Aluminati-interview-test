@@ -22,14 +22,21 @@ When I had a look at the package.json file I could determine that I would be wor
 
 # Numbers.vue
 
-I renamed the method n() to listOfRandomNumbers() as n() is not a good choice of method name as it is not descriptive and would surely cause confusion to anyone who did not write the code by themselves but had to contribute to the project.
-I added the props option and validated its type so that it returns the expected type of Number.
-I removed the watch option from the code due to the fact that we are receiving the ‘number’ property that is set up to automatically return the input value from the parent component.
-In the ‘listOfRandomNumbers()’ method I updated the variables so that ‘i = 1’ as this would ensure that that count starts at 1 and not 0 as per the specifications.
-I updated 'i < this.limit' to 'i < (this.$prop.number)' as it will render a list of 1-100 instead of 1-99 as the previous solution had done.
-Due to the limitations with the Math.random function in ‘listOfRandomNumbers()’ having a bias of only 0.5 I relied upon a well known ‘for loop’ randomisation algorithm called the “Fisher-Yates Shuffle”. This algorithm allows us to shuffle or randomise an array of values.
-I updated the ‘nums’ constant to ‘this.$refs.numberRef so that the Vue Virual DOM $refs is used instead of the this.window DOM method that relies on document queries or selectors.
-Changed ‘textContent’ to ‘innerText’ in the ‘num’ constant so that I get accurate values for each number.
+1: I renamed the method n() to listOfRandomNumbers() as n() is not a good choice of method name as it is not descriptive and would surely cause confusion to anyone who did not write the code by themselves but had to contribute to the project.
+
+2: I added the props option and validated its type so that it returns the expected type of Number.
+
+3: I removed the watch option from the code due to the fact that we are receiving the ‘number’ property that is set up to automatically return the input value from the parent component.
+
+4: In the ‘listOfRandomNumbers()’ method I updated the variables so that ‘i = 1’ as this would ensure that that count starts at 1 and not 0 as per the specifications.
+
+5: I updated 'i < this.limit' to 'i < (this.$prop.number)' as it will render a list of 1-100 instead of 1-99 as the previous solution had done.
+
+6: Due to the limitations with the Math.random function in ‘listOfRandomNumbers()’ having a bias of only 0.5 I relied upon a well known ‘for loop’ randomisation algorithm called the “Fisher-Yates Shuffle”. This algorithm allows us to shuffle or randomise an array of values.
+
+7: I updated the ‘nums’ constant to ‘this.$refs.numberRef so that the Vue Virual DOM $refs is used instead of the this.window DOM method that relies on document queries or selectors.
+
+8: Changed ‘textContent’ to ‘innerText’ in the ‘num’ constant so that I get accurate values for each number.
 I renamed the ‘hov’ method to ‘highlight’ so that it is more descriptive and in accordance with good coding practices.
 
 # Spec
