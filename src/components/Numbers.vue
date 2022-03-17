@@ -20,11 +20,15 @@ export default {
     listOfRandomNumbers()
     {
       let numbers = [];
-      for(var i = 1; i < (this.$props.number); i++)
+      for(var i = 1; i < (this.$props.number + 1); i++)
       {
         numbers = [...numbers, i];
       }
-      return numbers.sort(() => Math.random() - 0.5);
+      for (let i = numbers.length -1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+      }
+      return numbers
     },
     highlight(number)
     {
