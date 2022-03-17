@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="number" :id="'number-'+number" v-for="number in n()" :key="number" @mouseover="highlight(number)" @mouseout="reset">
+    <div class="number" :id="'number-'+number" v-for="number in listOfRandomNumbers()" :key="number" @mouseover="highlight(number)" @mouseout="reset" ref="numberRef">
       {{number}}
     </div>
   </div>
@@ -23,7 +23,7 @@ export default {
     }
   },
   methods: {
-    n()
+    listOfRandomNumbers()
     {
       let numbers = [];
       for(var i = 0; i < this.limit; i++)
