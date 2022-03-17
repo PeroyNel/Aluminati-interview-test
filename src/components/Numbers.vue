@@ -32,7 +32,7 @@ export default {
     },
     highlight(number)
     {
-      const nums = document.querySelectorAll('.number');
+      const nums = this.$refs.numberRef
 
       for(let i = 0; i < nums.length; i++)
       {
