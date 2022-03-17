@@ -36,7 +36,7 @@ export default {
 
       for(let i = 0; i < nums.length; i++)
       {
-        const num = nums[i].textContent.trim();
+        const num = nums[i].innerText.trim();
         if(number % num === 0)
         {
           nums[i].classList.add('active')
